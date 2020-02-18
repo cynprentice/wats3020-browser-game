@@ -33,7 +33,7 @@
 #gameboard div.col-xs-3 {
     width: 33%;
 }
-.tile {
+.tile, .player-icon {
     background: rgba(253, 255, 252, 0.2);
     color: rgba(150, 154, 151, 1);
     width: 90%;
@@ -56,6 +56,11 @@
     background: rgba(253, 255, 252, 0.1);
     cursor: pointer;
 }
+
+.player-icon:hover {
+color: pink;
+}
+
 .game-title {
     text-align: center;
 }

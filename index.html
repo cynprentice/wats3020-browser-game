@@ -10,22 +10,27 @@
   <meta name="author" content="Jane Student">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
   <!-- font awesome for icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+
   <!-- custom game styles -->
   <link rel="stylesheet" href="css/main.css">
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+  </script>
 
   <!-- custom game JS code -->
   <script src="js/main.js" defer></script>
@@ -33,6 +38,15 @@
 
 <body>
   <h1 class="game-title baby-powder-color">We <i class="fas fa-heart spring-green-color"></i> Tic Tac Toe</h1>
+  
+  <!--
+  <div id="player-choice">
+
+    <p><button id="set-player1-button" class="btn btn-primary btn-block">Set Player 1</button></p>
+
+    <p><button id="set-player2-button" class="btn btn-primary btn-block">Set Player 2</button></p>
+  </div>
+-->
   <div class="row">
     <div class="col-lg-3 col-xs">
       <div id="move-prompt" class="hidden">
@@ -66,13 +80,42 @@
   <div id="win-screen">
     <div class="container">
       <h2><i id="winner-token"></i> Won!</h2>
-      <p><a class="btn btn-success btn-block" href=".">Play Again?</a></p>
+      <!--<p><a class="btn btn-success btn-block" href=".">Play Again?</a></p> -->
+      <p><button id="winPlayAgain" class="btn btn-primary btn-block"> Play Again?</button></p>
     </div>
   </div>
   <div id="draw-screen">
     <div class="container">
       <h2>There are no more moves!</h2>
-      <p><a class="btn btn-success btn-block" href=".">Play Again?</a></p>
+      <p><button id="drawPlayAgain" class="btn btn-primary btn-block"> Play Again?</button></p>
+    </div>
+  </div>
+  <div id="score">
+    <div class="container">
+      <h2 class="spring-green-color">Score</h2>
+      <table id="scoreboard">
+        <thead>
+          <tr>
+            <th scope="col" class="spring-green-color">Player</th>
+            <th scope="col" class="spring-green-color">Games won</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="spring-green-color"><i id="player1" class="fas fa-heart player-icon"></i></th>
+            <td class="spring-green-color ">
+              <p id="player1Score">0</p>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="spring-green-color"><i id="player2" class="fas fa-star player-icon"></i></th>
+            <td class="spring-green-color ">
+              <p id="player2Score">0</p>
+          </tr>
+        </tbody>
+      </table>
+
+
     </div>
   </div>
 </body>
