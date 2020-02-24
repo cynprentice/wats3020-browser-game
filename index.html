@@ -16,7 +16,7 @@
   <!-- font awesome for icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  
+
 
   <!-- custom game styles -->
   <link rel="stylesheet" href="css/main.css">
@@ -38,7 +38,7 @@
 
 <body>
   <h1 class="game-title baby-powder-color">We <i class="fas fa-heart spring-green-color"></i> Tic Tac Toe</h1>
-  
+
   <!--
   <div id="player-choice">
 
@@ -95,22 +95,51 @@
       <h2 class="spring-green-color">Score</h2>
       <table id="scoreboard">
         <thead>
+          <!-- Scoreboard headers-->
           <tr>
             <th scope="col" class="spring-green-color">Player</th>
             <th scope="col" class="spring-green-color">Games won</th>
+            <th scope="col" class="spring-green-color"></th>
           </tr>
         </thead>
         <tbody>
+          <!-- Player 1 Row -->
           <tr>
-            <th scope="row" class="spring-green-color"><i id="player1" class="fas fa-heart player-icon"></i></th>
+            <th scope="row" class="spring-green-color">
+              <i id="player1" class="fas fa-heart player-icon"></i></th>
+            </th>
             <td class="spring-green-color ">
               <p id="player1Score">0</p>
             </td>
+            <td>
+              <div class="dropdown">
+                <button  id="player1Button" onclick="player1Dropdown()" class="dropbtn">Select Player 1 Icon</button>
+                <div id="player1Dropdown" class="dropdown-content">
+                  <i id="player1Heart" class="fas fa-heart dropdown-icon"></i>
+                  <i id="player1Jet" class="fas fa-fighter-jet dropdown-icon"></i>
+                  <i id="player1Ski" class="fas  fa-skiing dropdown-icon"></i>
+                  <i id="player1Dog" class="fas fa-dog dropdown-icon"></i>
+                </div>
+              </div>
+            </td>
           </tr>
+          <!-- Player 2 Row -->
           <tr>
             <th scope="row" class="spring-green-color"><i id="player2" class="fas fa-star player-icon"></i></th>
             <td class="spring-green-color ">
               <p id="player2Score">0</p>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button id = "player2Button" onclick="player2Dropdown()" class="dropbtn">Select Player 2 Icon</button>
+                <div id="player2Dropdown" class="dropdown-content">
+                  <i id="player2Star" class="fas fa-star dropdown-icon"></i>
+                  <i id="player2Helicopter" class="fas fa-helicopter dropdown-icon"></i>
+                  <i id="player2Snowboard" class="fas  fa-snowboarding dropdown-icon"></i>
+                  <i id="player2Cat" class="fas fa-cat dropdown-icon"></i>
+                </div>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
