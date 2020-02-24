@@ -192,7 +192,7 @@ class TicTacToe {
 
                 // create tiles for the gameboard
                 let newTile = document.createElement("span");
-                newTile.setAttribute("class", `tile fas-fa-question-sign`);
+                newTile.setAttribute("class", `tile fas fa-question`);
                 newTile.setAttribute("data-x", i);
                 newTile.setAttribute("data-y", j);
 
