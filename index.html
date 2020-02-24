@@ -39,14 +39,6 @@
 <body>
   <h1 class="game-title baby-powder-color">We <i class="fas fa-heart spring-green-color"></i> Tic Tac Toe</h1>
 
-  <!--
-  <div id="player-choice">
-
-    <p><button id="set-player1-button" class="btn btn-primary btn-block">Set Player 1</button></p>
-
-    <p><button id="set-player2-button" class="btn btn-primary btn-block">Set Player 2</button></p>
-  </div>
--->
   <div class="row">
     <div class="col-lg-3 col-xs">
       <div id="move-prompt" class="hidden">
@@ -80,7 +72,6 @@
   <div id="win-screen">
     <div class="container">
       <h2><i id="winner-token"></i> Won!</h2>
-      <!--<p><a class="btn btn-success btn-block" href=".">Play Again?</a></p> -->
       <p><button id="winPlayAgain" class="btn btn-primary btn-block"> Play Again?</button></p>
     </div>
   </div>
@@ -113,7 +104,7 @@
             </td>
             <td>
               <div class="dropdown">
-                <button  id="player1Button" onclick="player1Dropdown()" class="dropbtn">Select Player 1 Icon</button>
+                <button id="player1Button" onclick="player1Dropdown()" class="dropbtn">Select Player 1 Icon</button>
                 <div id="player1Dropdown" class="dropdown-content">
                   <i id="player1Heart" class="fas fa-heart dropdown-icon"></i>
                   <i id="player1Jet" class="fas fa-fighter-jet dropdown-icon"></i>
@@ -131,7 +122,7 @@
             </td>
             <td>
               <div class="dropdown">
-                <button id = "player2Button" onclick="player2Dropdown()" class="dropbtn">Select Player 2 Icon</button>
+                <button id="player2Button" onclick="player2Dropdown()" class="dropbtn">Select Player 2 Icon</button>
                 <div id="player2Dropdown" class="dropdown-content">
                   <i id="player2Star" class="fas fa-star dropdown-icon"></i>
                   <i id="player2Helicopter" class="fas fa-helicopter dropdown-icon"></i>
