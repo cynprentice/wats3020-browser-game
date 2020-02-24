@@ -2,8 +2,8 @@
 /* Build a tic tac toe game for two players. */
 
 var game = null;
-var player1Token = "fire";
-var player2Token = "snowflake";
+var player1Token = "heart";
+var player2Token = "star";
 
 // Player class 
 class Player {
